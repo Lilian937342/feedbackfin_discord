@@ -1,11 +1,11 @@
 {
-  "name": "feedbackfin",
+  "name": "Lilian937342@feedbackfin_discord",
   "version": "1.0.3",
   "license": "Apache-2.0",
   "homepage": "https://feedbackfin.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rowyio/feedbackfin.git"
+    "url": "https://github.com/Lilian937342/feedbackfin_discord.git"
   },
   "type": "module",
   "source": "src/index.ts",

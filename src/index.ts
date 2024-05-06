@@ -115,11 +115,28 @@ function submit(e: Event) {
   myHeaders.append("Content-Type", "application/json");
 
   const data = {
-    ...config.user,
-    feedbackType: (target.elements as any).feedbackType.value,
-    message: (target.elements as any).message.value,
-    timestamp: Date.now(),
+    username: config.user.name ?? "Feedback app",
+    avatar_url: "",
+    content: "",
+    embeds: [
+      {
+        "title": "Some title",
+        "color": 15258703,
+        "thumbnail": {
+          "url": "",
+        },
+        "fields": [
+          {
+            "name": (target.elements as any).feedbackType.value,
+            "value": (target.elements as any).message.value,
+            "inline": true
+          }
+        ]
+      }
+    ],
   };
+
+
 
   fetch(config.url, {
     method: "POST",
